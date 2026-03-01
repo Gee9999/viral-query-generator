@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PROMPT BUILDER</title>
+    <meta name="description" content="A deterministic AI prompt compiler for professional systems engineering.">
+    <link rel="stylesheet" href="/src/style.css">
+</head>
+
+<body class="dark-theme">
+    <!-- GATEKEEPER UI REMOVED -->
+
+    <div id="app" class="app-unlocked">
+        <header class="app-header">
+            <div class="logo">PROMPT BUILDER</div>
+            <div class="header-actions">
+                <button id="new-btn" class="header-btn" title="Start Fresh">
+                    <span class="icon">✨</span> New
+                </button>
+                <button id="library-btn" class="header-btn" title="Open Saved Prompts">
+                    <span class="icon">📚</span> Library
+                </button>
+                <span class="divider-vertical">|</span>
+                <button id="export-btn" class="header-btn" title="Download JSON">Save to Local File</button>
+                <button id="import-btn" class="header-btn" title="Upload JSON">Load File</button>
+                <input type="file" id="file-input" style="display: none;" accept=".json">
+            </div>
+        </header>
+
+        <main class="main-layout">
+            <!-- COLUMN 1: NAVIGATION & ANALYTICS -->
+            <aside class="sidebar-left">
+                <div class="sidebar-section">
+                    <h2 class="section-label">PROCESS MAP</h2>
+                    <div id="step-nav" class="node-nav"></div>
+                </div>
+
+                <div class="sidebar-section">
+                    <h2 class="section-label">PROMPT STRENGTH</h2>
+                    <div class="quality-meter-container">
+                        <div class="quality-bar">
+                            <div id="quality-fill" class="quality-fill"></div>
+                        </div>
+                        <div id="quality-status" class="quality-label">Awaiting input...</div>
+                        <ul id="quality-hints" class="quality-hints"></ul>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- COLUMN 2: ACTIVE FORM -->
+            <section class="form-container">
+                <div id="step-form" class="phase-card">
+                    <!-- Dynamic Content -->
+                </div>
+                <div class="form-footer">
+                    <button id="prev-btn" class="nav-btn prev" disabled>Back</button>
+                    <button id="next-btn" class="nav-btn next" disabled>Next</button>
+                </div>
+            </section>
+
+            <!-- COLUMN 3: RESULT PREVIEW -->
+            <aside class="sidebar-right">
+                <div class="sidebar-section full-height">
+                    <h2 class="section-label">COMPARE YOUR PROMPTS</h2>
+
+                    <!-- Option 1: User's Original Prompt -->
+                    <div id="artifact-super" class="artifact-block primary-glow">
+                        <div class="artifact-header">
+                            <div class="artifact-title">
+                                <h3>YOUR PROMPT</h3>
+                                <span class="tag tag-user">AS ENTERED</span>
+                            </div>
+                            <button class="copy-btn" data-artifact="super" disabled>Copy</button>
+                        </div>
+                        <pre class="prompt-text placeholder">Complete required phases to generate your prompt...</pre>
+                    </div>
+
+                    <!-- Option 2: AI-Enhanced Prompt -->
+                    <h2 class="section-label mt-20">AI RECOMMENDATION</h2>
+                    <div id="artifact-enhanced" class="artifact-block enhanced-glow">
+                        <div class="artifact-header">
+                            <div class="artifact-title">
+                                <h3>AI-ENHANCED PROMPT</h3>
+                                <span class="tag tag-ai">IMPROVED</span>
+                            </div>
+                            <button class="copy-btn" data-artifact="enhanced" disabled>Copy</button>
+                        </div>
+                        <pre
+                            class="prompt-text placeholder">Complete required phases to generate enhanced version...</pre>
+                    </div>
+
+                    <div class="prompt-comparison-note">
+                        <p>💡 <strong>Compare both versions</strong> — Copy the one that best fits your needs, or mix
+                            elements from each!</p>
+                    </div>
+                </div>
+            </aside>
+        </main>
+    </div>
+
+    <!-- FINAL COMPLETION MODAL -->
+    <div id="finish-modal" class="modal-overlay hidden">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Prompt Engineering Complete!</h2>
+                <button id="close-modal" class="close-btn">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p>Your <strong>Superprompt</strong> is optimized and ready for Gemini.</p>
+                <div class="final-actions">
+                    <button id="final-copy-btn" class="hero-btn">Copy Master Prompt</button>
+                    <button id="final-save-btn" class="hero-btn secondary">Download Project Config</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Library Modal -->
+    <div id="library-modal" class="modal hidden">
+        <div class="modal-content library-content">
+            <span id="close-library" class="close-modal">&times;</span>
+            <div class="library-header">
+                <h2><span class="icon">📚</span> Prompt Memory</h2>
+                <div class="lib-header-actions">
+                    <button id="backup-library-btn" class="action-btn secondary" title="Download all saved prompts">⬇
+                        Backup All</button>
+                    <button id="save-to-library-btn" class="action-btn primary">+ Save Current</button>
+                </div>
+            </div>
+            <div id="library-list" class="library-list">
+                <!-- Items injected via JS -->
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>

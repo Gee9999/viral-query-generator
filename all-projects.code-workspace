@@ -1,0 +1,91 @@
+{
+    "folders": [
+        {
+            "name": "🏠 AI-WORKBENCH (Main)",
+            "path": "c:/Users/geozi/AI-WORKBENCH"
+        },
+        {
+            "name": "🎨 PROMPT BUILDER",
+            "path": "c:/Users/geozi/Downloads/PROMPT BUILDER"
+        },
+        {
+            "name": "📈 TRENDSCOPE LIVE",
+            "path": "c:/Users/geozi/Downloads/TRENDSCOPE LIVE"
+        },
+        {
+            "name": "🔥 TREND TOP 100",
+            "path": "c:/Users/geozi/Downloads/TREND TOP 100"
+        },
+        {
+            "name": "🎓 Training (Safari Academy)",
+            "path": "c:/Users/geozi/Downloads/Training"
+        },
+        {
+            "name": "🧵 Seamless Maker",
+            "path": "c:/Users/geozi/Downloads/Seamless_maker"
+        },
+        {
+            "name": "🔲 Seamless Tiler",
+            "path": "c:/Users/geozi/Downloads/seamless-tiler"
+        },
+        {
+            "name": "🌍 Proto Website",
+            "path": "c:/Users/geozi/Downloads/Proto-website"
+        },
+        {
+            "name": "🔍 LEAD-FINDER",
+            "path": "c:/Users/geozi/Downloads/LEAD-FINDER"
+        },
+        {
+            "name": "🌍 Africa Lead Finder ELITE",
+            "path": "c:/Users/geozi/Downloads/Africa-social-lead-finder-ELITE"
+        },
+        {
+            "name": "⚙️ AI-Workbench-v2",
+            "path": "c:/Users/geozi/Downloads/AI-Workbench-v2"
+        },
+        {
+            "name": "⚙️ AI-Workbench-Full-App",
+            "path": "c:/Users/geozi/Downloads/AI-Workbench-Full-App"
+        },
+        {
+            "name": "⚙️ AI-Workbench Runner",
+            "path": "c:/Users/geozi/Downloads/ai-workbench-runner"
+        },
+        {
+            "name": "📌 Pin Pulse Analyzer",
+            "path": "c:/Users/geozi/Downloads/pin-pulse-analyzer-main"
+        },
+        {
+            "name": "🧰 Antigravity Skills",
+            "path": "c:/Users/geozi/Downloads/antigravity-awesome-skills-main"
+        },
+        {
+            "name": "📧 Proto Email Finder",
+            "path": "c:/Users/geozi/Documents/Proto Email finder"
+        }
+    ],
+    "settings": {
+        "explorer.compactFolders": false,
+        "files.exclude": {
+            "**/node_modules": true,
+            "**/.git": true,
+            "**/.next": true,
+            "**/dist": true,
+            "**/.venv": true,
+            "**/__pycache__": true
+        },
+        "search.exclude": {
+            "**/node_modules": true,
+            "**/.git": true,
+            "**/dist": true
+        }
+    },
+    "extensions": {
+        "recommendations": [
+            "esbenp.prettier-vscode",
+            "dbaeumer.vscode-eslint",
+            "ms-python.python"
+        ]
+    }
+}
